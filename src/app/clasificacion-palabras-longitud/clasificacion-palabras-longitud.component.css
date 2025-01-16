@@ -64,15 +64,5 @@ ul li {
   margin-top: 10px;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .contenedor {
-    padding: 15px;
-  }
 
-  button {
-    width: 100%;
-    font-size: 14px;
-  }
-}
 

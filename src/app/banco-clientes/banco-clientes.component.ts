@@ -71,7 +71,7 @@ export class BancoClientesComponent {
         break;
       case 2:
         const cliente = this.banco.buscarClientePorId(argumento1);
-        this.mensaje = cliente ? cliente.mostrarEstado() : 'Cliente no encontrado.';
+        this.mensaje = cliente ? cliente.mostrarEstado() : 'No se ha encontrado el cliente.';
         break;
       case 3:
         const saldoTotal = this.banco.calcularSaldoTotal();

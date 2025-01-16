@@ -31,11 +31,6 @@ p, pre {
   border-radius: 5px;
 }
 
-pre {
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
 span {
   font-weight: bold;
 }

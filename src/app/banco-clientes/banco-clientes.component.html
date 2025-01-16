@@ -4,10 +4,10 @@
   <h2>Opciones</h2>
   <div class="opcion">
     <label for="agregar-id">ID del Cliente:</label>
-    <input id="agregar-id" #addId type="number" placeholder="Ingrese ID" />
+    <input id="agregar-id" #addId type="number" placeholder="Ingrese el ID" />
 
     <label for="agregar-nombre">Nombre del Cliente:</label>
-    <input id="agregar-nombre" #addName type="text" placeholder="Ingrese nombre" />
+    <input id="agregar-nombre" #addName type="text" placeholder="Ingrese el nombre" />
 
     <button (click)="interactuarConBanco(1, +addId.value, addName.value)">
       Agregar Cliente
@@ -16,7 +16,7 @@
 
   <div class="opcion">
     <label for="buscar-id">Buscar Cliente por ID:</label>
-    <input id="buscar-id" #searchId type="number" placeholder="Ingrese ID" />
+    <input id="buscar-id" #searchId type="number" placeholder="Ingrese el ID" />
     <button (click)="interactuarConBanco(2, +searchId.value)">Buscar</button>
   </div>
 
@@ -28,10 +28,10 @@
 
   <div class="opcion">
     <label for="ingreso-id">ID del Cliente (Depósito):</label>
-    <input id="ingreso-id" #depositId type="number" placeholder="Ingrese ID" />
+    <input id="ingreso-id" #depositId type="number" placeholder="Ingrese el ID" />
 
     <label for="ingreso-cantidad">Cantidad a Depositar:</label>
-    <input id="ingreso-cantidad" #depositAmount type="number" placeholder="Ingrese cantidad" />
+    <input id="ingreso-cantidad" #depositAmount type="number" placeholder="Ingrese la cantidad" />
 
     <button (click)="interactuarConBanco(4, +depositId.value, +depositAmount.value)">
       Realizar Depósito

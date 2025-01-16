@@ -13,11 +13,11 @@ import {
 } from './clasificacion-palabras-longitud/clasificacion-palabras-longitud.component';
 import {SistemaVehiculosComponent} from './sistema-vehiculos/sistema-vehiculos.component';
 import {SistemaEmpleadosEmpresaComponent} from './sistema-empleados-empresa/sistema-empleados-empresa.component';
-import {SistemaPagoComponent} from './sistema-pago/sistema-pago.component';
+
 
 @Component({
   selector: 'app-root',
-  imports: [CatalogoPeliculasComponent, GestionPedidosRestauranteComponent, AnalisisDatosMeteorologicosComponent, LibreriaPalabrasClaveComponent, BancoClientesComponent, ZooVirtualComponent, ListadoProductosComponent, ClasificacionPalabrasLongitudComponent, SistemaVehiculosComponent, SistemaEmpleadosEmpresaComponent, SistemaPagoComponent],
+  imports: [CatalogoPeliculasComponent, GestionPedidosRestauranteComponent, AnalisisDatosMeteorologicosComponent, LibreriaPalabrasClaveComponent, BancoClientesComponent, ZooVirtualComponent, ListadoProductosComponent, ClasificacionPalabrasLongitudComponent, SistemaVehiculosComponent, SistemaEmpleadosEmpresaComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

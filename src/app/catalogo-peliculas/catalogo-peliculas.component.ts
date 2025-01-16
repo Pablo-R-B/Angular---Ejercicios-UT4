@@ -22,9 +22,9 @@ export class CatalogoPeliculasComponent {
 
   peliculas: Pelicula[] = [
     { titulo: "Inception", director: "Christopher Nolan", anyo: 2010, genero: "Ciencia ficcion", valoracion: 9 },
-    { titulo: "The Godfather", director: "Francis Ford Coppola", anyo: 1972, genero: "Poliaco", valoracion: 10 },
+    { titulo: "El padrinno", director: "Francis Ford Coppola", anyo: 1972, genero: "Poliaco", valoracion: 10 },
     { titulo: "Interstellar", director: "Christopher Nolan", anyo: 2014, genero: "Ciencia ficcion", valoracion: 8 },
-    { titulo: "Parasite", director: "Bong Joon-ho", anyo: 2019, genero: "Suspense", valoracion: 9 },
+    { titulo: "Parásitos", director: "Bong Joon-ho", anyo: 2019, genero: "Suspense", valoracion: 9 },
     { titulo: "Pulp Fiction", director: "Quentin Tarantino", anyo: 1994, genero: "Poliaco", valoracion: 8 },
   ];
 

@@ -12,7 +12,7 @@ import {NgForOf, NgIf} from '@angular/common';
 })
 export class ClasificacionPalabrasLongitudComponent {
 
-  palabras: string[] = ['manzana', 'pera', 'melon', 'plátano', 'kiwi', 'fresa'];
+  palabras: string[] = ['manzana', 'pera', 'melon', 'plátano', 'níspero', 'fresa'];
 
   palabrasMayusculas: string[] = [];
   palabrasLargas: string[] = [];

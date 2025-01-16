@@ -62,7 +62,7 @@ export class SistemaVehiculosComponent {
   agregarMotocicleta(marca: string, modelo: string, año: number, manillar: string): void {
     const nuevaMotocicleta = new Motocicleta(marca, modelo, año, manillar);
     this.vehiculos.push(nuevaMotocicleta);
-    this.mensaje = 'Motocicleta añadida con éxito.';
+    this.mensaje = 'La motocicleta añadida con éxito.';
   }
 
   mostrarDetalles(): string[] {

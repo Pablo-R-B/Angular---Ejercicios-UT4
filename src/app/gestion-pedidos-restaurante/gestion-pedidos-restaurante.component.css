@@ -46,11 +46,6 @@ select.form-control {
   cursor: pointer;
 }
 
-.btn-primary:hover {
-  background-color: #0056b3;
-}
-
-/* Filtros Section */
 .filtros {
   margin-bottom: 30px;
   border-bottom: 1px solid #ddd;

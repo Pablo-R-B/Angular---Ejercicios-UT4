@@ -47,7 +47,7 @@ export class AnalisisDatosMeteorologicosComponent {
     const temperaturaPromedio = this.calcularTemperaturaPromedio().toFixed(1);
     const diaMaxTemp = this.encontrarDiaConMaximaTemperatura();
 
-    return `Resumen del mes:\nDías lluviosos: ${diasLluviosos}\nTemperatura promedio: ${temperaturaPromedio}°C\nMáxima temperatura: ${diaMaxTemp?.temperatura}°C el día ${diaMaxTemp?.fecha}`;
+    return `Resumen del mes:\nDías lluviosos: ${diasLluviosos}\nTemperatura promedio: ${temperaturaPromedio}°C\nTemperatura máxima: ${diaMaxTemp?.temperatura}°C el día ${diaMaxTemp?.fecha}`;
   }
 
 }

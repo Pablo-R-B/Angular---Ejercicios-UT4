@@ -49,7 +49,7 @@ export class LibreriaPalabrasClaveComponent {
         this.ordenarPalabras();
         break;
       default:
-        this.message = 'Opción inválida.';
+        this.message = 'Opción no válida.';
     }
   }
 

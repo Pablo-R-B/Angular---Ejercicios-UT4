@@ -75,7 +75,7 @@ export class ZooVirtualComponent {
           animalHabitat.cambiarHabitat(argumento2);
           this.mensaje = `Hábitat de ${argumento1} actualizado a ${argumento2}.`;
         } else {
-          this.mensaje = 'Animal no encontrado.';
+          this.mensaje = 'No se encontró el animal.';
         }
         break;
       case 5:

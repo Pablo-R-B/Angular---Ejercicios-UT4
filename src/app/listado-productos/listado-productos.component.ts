@@ -15,9 +15,9 @@ export class ListadoProductosComponent {
 
   productos = [
     { nombre: "Manzana", precio: 5, categoria: "alimentos" },
-    { nombre: "Cereal", precio: 12, categoria: "alimentos" },
+    { nombre: "Cereales", precio: 12, categoria: "alimentos" },
     { nombre: "Detergente", precio: 15, categoria: "limpieza" },
-    { nombre: "Shampoo", precio: 8, categoria: "higiene" }
+    { nombre: "Champú", precio: 8, categoria: "higiene" }
   ];
 
   nombresCaros: string[] = [];

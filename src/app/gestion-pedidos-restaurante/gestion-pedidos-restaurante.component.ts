@@ -60,7 +60,8 @@ export class GestionPedidosRestauranteComponent implements OnInit{
   platos: Plato[] = [
     new Plato(1, 'Paella', 20),
     new Plato(2, 'Gazpacho', 8),
-    new Plato(3, 'Tortilla', 10)
+    new Plato(3, 'Tortilla', 10),
+    new Plato(2, "Calamares", 15)
   ];
 
   nuevoCliente = '';

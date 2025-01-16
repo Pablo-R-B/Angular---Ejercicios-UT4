@@ -65,13 +65,13 @@ export class SistemaEmpleadosEmpresaComponent {
   agregarEmpleadoTiempoCompleto(nombre: string, apellido: string, salario: number, horasExtras: number, bonoPorHora: number): void {
     const nuevoEmpleado = new EmpleadoTiempoCompleto(nombre, apellido, salario, horasExtras, bonoPorHora);
     this.empleados.push(nuevoEmpleado);
-    this.mensaje = 'Empleado a tiempo completo añadido con éxito.';
+    this.mensaje = 'El empleado a tiempo completo ha sido añadido.';
   }
 
   agregarEmpleadoPorHoras(nombre: string, apellido: string, tarifaPorHora: number, horasTrabajadas: number): void {
     const nuevoEmpleado = new EmpleadoPorHoras(nombre, apellido, tarifaPorHora, horasTrabajadas);
     this.empleados.push(nuevoEmpleado);
-    this.mensaje = 'Empleado por horas añadido con éxito.';
+    this.mensaje = 'El empleado por horas ha sido añadido.';
   }
 
   mostrarDetalles(): string[] {
