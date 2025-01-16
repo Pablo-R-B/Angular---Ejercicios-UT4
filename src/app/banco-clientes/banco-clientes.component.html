@@ -1,0 +1,55 @@
+<div class="contenedor">
+  <h1>Banco de Clientes</h1>
+
+  <h2>Opciones</h2>
+  <div class="opcion">
+    <label for="agregar-id">ID del Cliente:</label>
+    <input id="agregar-id" #addId type="number" placeholder="Ingrese ID" />
+
+    <label for="agregar-nombre">Nombre del Cliente:</label>
+    <input id="agregar-nombre" #addName type="text" placeholder="Ingrese nombre" />
+
+    <button (click)="interactuarConBanco(1, +addId.value, addName.value)">
+      Agregar Cliente
+    </button>
+  </div>
+
+  <div class="opcion">
+    <label for="buscar-id">Buscar Cliente por ID:</label>
+    <input id="buscar-id" #searchId type="number" placeholder="Ingrese ID" />
+    <button (click)="interactuarConBanco(2, +searchId.value)">Buscar</button>
+  </div>
+
+  <div class="opcion">
+    <button (click)="interactuarConBanco(3, searchId.value)">
+      Calcular Saldo Total del Banco
+    </button>
+  </div>
+
+  <div class="opcion">
+    <label for="ingreso-id">ID del Cliente (Depósito):</label>
+    <input id="ingreso-id" #depositId type="number" placeholder="Ingrese ID" />
+
+    <label for="ingreso-cantidad">Cantidad a Depositar:</label>
+    <input id="ingreso-cantidad" #depositAmount type="number" placeholder="Ingrese cantidad" />
+
+    <button (click)="interactuarConBanco(4, +depositId.value, +depositAmount.value)">
+      Realizar Depósito
+    </button>
+  </div>
+
+  <div class="opcion">
+    <label for="retirar-id">ID del Cliente (Retiro):</label>
+    <input id="retirar-id" #withdrawId type="number" placeholder="Ingrese ID" />
+
+    <label for="retirar-cantidad">Cantidad a Retirar:</label>
+    <input id="retirar-cantidad" #withdrawAmount type="number" placeholder="Ingrese cantidad" />
+
+    <button (click)="interactuarConBanco(5, +withdrawId.value, +withdrawAmount.value)">
+      Realizar Retiro
+    </button>
+  </div>
+
+  <h2>Mensaje</h2>
+  <p>{{ mensaje }}</p>
+</div>

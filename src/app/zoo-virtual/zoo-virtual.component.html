@@ -1,0 +1,62 @@
+<div class="zoo">
+  <h1>Zoológico Virtual</h1>
+
+  <h2>Agregar Animal</h2>
+  <div class="opcion">
+    <label for="especie">Especie:</label>
+    <input id="especie" #especie type="text" placeholder="Ingrese especie" />
+
+    <label for="nombre">Nombre:</label>
+    <input id="nombre" #nombre type="text" placeholder="Ingrese nombre" />
+
+    <label for="edad">Edad:</label>
+    <input id="edad" #edad type="number" placeholder="Ingrese edad" />
+
+    <label for="habitat">Hábitat:</label>
+    <input id="habitat" #habitat type="text" placeholder="Ingrese hábitat" />
+
+    <button (click)="interactuarConZoo(1, especie.value, { nombre: nombre.value, edad: +edad.value, habitat: habitat.value })">
+      Agregar Animal
+    </button>
+  </div>
+
+  <h2>Buscar Animales</h2>
+  <div class="opcion">
+    <label for="buscar-especie">Buscar por Especie:</label>
+    <input id="buscar-especie" #buscarEspecie type="text" placeholder="Ingrese especie" />
+    <button (click)="interactuarConZoo(2, buscarEspecie.value)">Buscar</button>
+  </div>
+
+  <div class="opcion">
+    <label for="buscar-habitat">Mostrar por Hábitat:</label>
+    <input id="buscar-habitat" #buscarHabitat type="text" placeholder="Ingrese hábitat" />
+    <button (click)="interactuarConZoo(3, buscarHabitat.value)">Mostrar</button>
+  </div>
+
+  <h2>Actualizar Animal</h2>
+  <div class="opcion">
+    <label for="nombre-habitat">Nombre del Animal:</label>
+    <input id="nombre-habitat" #nombreHabitat type="text" placeholder="Ingrese nombre" />
+
+    <label for="nuevo-habitat">Nuevo Hábitat:</label>
+    <input id="nuevo-habitat" #nuevoHabitat type="text" placeholder="Ingrese nuevo hábitat" />
+
+    <button (click)="interactuarConZoo(4, nombreHabitat.value, nuevoHabitat.value)">
+      Cambiar Hábitat
+    </button>
+  </div>
+
+  <div class="opcion">
+    <label for="nombre-edad">Nombre del Animal:</label>
+    <input id="nombre-edad" #nombreEdad type="text" placeholder="Ingrese nombre" />
+    <button (click)="interactuarConZoo(5, nombreEdad.value)">
+      Incrementar Edad
+    </button>
+  </div>
+
+  <h2>Resultados</h2>
+  <p *ngIf="mensaje">{{ mensaje }}</p>
+  <ul>
+    <li *ngFor="let resultado of resultados">{{ resultado }}</li>
+  </ul>
+</div>

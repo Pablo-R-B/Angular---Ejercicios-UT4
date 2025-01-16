@@ -1,0 +1,46 @@
+<div class="contenedor">
+  <h2>Gestión de Pedidos</h2>
+
+  <div class="nuevo-pedido">
+    <h3>Nuevo Pedido</h3>
+    <div class="form-group">
+      <input [(ngModel)]="nuevoCliente" placeholder="Nombre del cliente" class="form-control">
+      <select [(ngModel)]="platosSeleccionados" multiple class="form-control">
+        <option *ngFor="let plato of platos" [ngValue]="plato">
+          {{plato.nombre}} - {{plato.precio}}€
+        </option>
+      </select>
+      <button (click)="agregarPedido()" class="btn-primary">Agregar Pedido</button>
+    </div>
+  </div>
+
+  <div class="filtros">
+    <h3>Filtros</h3>
+    <input [(ngModel)]="filtroCliente"
+           (ngModelChange)="actualizarPedidos()"
+           placeholder="Buscar por cliente"
+           class="form-control">
+    <input type="number"
+           [(ngModel)]="filtroCantidad"
+           (ngModelChange)="actualizarPedidos()"
+           placeholder="Filtrar por total mínimo"
+           class="form-control">
+  </div>
+
+  <div class="lista-pedidos">
+    <h3>Pedidos</h3>
+    <div *ngFor="let pedido of pedidos" class="pedido-card">
+      <h4>Pedido #{{pedido.id}} - {{pedido.cliente}}</h4>
+      <ul>
+        <li *ngFor="let plato of pedido.platos">
+          {{plato.nombre}} - {{plato.precio}}€
+        </li>
+      </ul>
+      <p>Total: {{pedido.calculaTotal()}}€</p>
+    </div>
+  </div>
+
+  <div class="total-ventas">
+    <h3>Total Ventas: {{restaurante.calcularTotalVentas()}}€</h3>
+  </div>
+</div>

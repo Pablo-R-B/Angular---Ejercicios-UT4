@@ -1,0 +1,113 @@
+.contenedor {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+h2, h3 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.nuevo-pedido {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-control {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+}
+
+select.form-control {
+  height: auto;
+}
+
+.btn-primary {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Filtros Section */
+.filtros {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.filtros .form-control {
+  margin-bottom: 10px;
+}
+
+/* Lista de Pedidos */
+.lista-pedidos {
+  margin-bottom: 30px;
+}
+
+.pedido-card {
+  background: #f4f4f4;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pedido-card h4 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.pedido-card ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pedido-card li {
+  margin-bottom: 5px;
+  padding: 5px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.pedido-card p {
+  margin-top: 10px;
+  font-weight: bold;
+
+}
+
+/* Total Ventas Section */
+.total-ventas {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  background: #e7f3ff;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #cce5ff;
+  color: #0056b3;
+}
+

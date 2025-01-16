@@ -1,0 +1,29 @@
+<div class="productos">
+  <h1>Gestión de Productos</h1>
+
+  <div class="opcion">
+    <h2>Obtener nombres de productos caros</h2>
+    <button (click)="obtenerNombresCaros()">Mostrar</button>
+    <ul>
+      <li *ngFor="let nombre of nombresCaros">{{ nombre }}</li>
+    </ul>
+  </div>
+
+  <div class="opcion">
+    <h2>Calcular promedio de precios en alimentos</h2>
+    <button (click)="calcularPromedioAlimentos()">Calcular</button>
+    <p *ngIf="promedioAlimentos !== null">
+      Promedio: {{ promedioAlimentos | number:'1.2-2' }} €
+    </p>
+  </div>
+
+  <div class="opcion">
+    <h2>Aplicar descuento del 10%</h2>
+    <button (click)="aplicarDescuento()">Aplicar</button>
+    <ul>
+      <li *ngFor="let producto of productosConDescuento">
+        {{ producto.nombre }}: {{ producto.precio | number:'1.2-2' }} €
+      </li>
+    </ul>
+  </div>
+</div>

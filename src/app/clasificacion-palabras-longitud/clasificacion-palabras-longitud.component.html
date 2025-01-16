@@ -1,0 +1,29 @@
+<div class="contenedor">
+  <h1>Clasificación de Palabras</h1>
+
+  <div class="opcion">
+    <h2>Procesar Palabras</h2>
+    <button (click)="procesarPalabras()">Procesar</button>
+  </div>
+
+  <div *ngIf="palabrasMayusculas && palabrasMayusculas.length">
+    <h3>Palabras en Mayúsculas</h3>
+    <ul>
+      <li *ngFor="let palabra of palabrasMayusculas">{{ palabra }}</li>
+    </ul>
+  </div>
+
+  <div *ngIf="palabrasLargas.length > 0" class="resultado">
+    <h3>Palabras con más de 5 letras</h3>
+    <ul>
+      <li *ngFor="let palabra of palabrasLargas">{{ palabra }}</li>
+    </ul>
+  </div>
+
+  <div *ngIf="palabrasOrdenadas.length > 0" class="resultado">
+    <h3>Palabras Ordenadas por Longitud</h3>
+    <ul>
+      <li *ngFor="let palabra of palabrasOrdenadas">{{ palabra }}</li>
+    </ul>
+  </div>
+</div>

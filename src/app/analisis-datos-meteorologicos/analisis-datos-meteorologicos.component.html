@@ -1,0 +1,23 @@
+<div class="weather-analysis">
+  <h1>Análisis de Datos Meteorológicos</h1>
+
+  <h2>Días Registrados</h2>
+  <ul>
+    <li *ngFor="let dia of dias">
+      {{ dia.fecha }} - Temp: {{ dia.temperatura }}°C, Humedad: {{ dia.humedad }}%, Precipitación: {{ dia.precipitacion }} mm
+    </li>
+  </ul>
+
+  <h2>Resultados</h2>
+  <p>Temperatura promedio: {{ calcularTemperaturaPromedio() | number:'1.1-1' }}°C</p>
+  <p>Días con lluvia: {{ filtrarDiasConLluvia().length }}</p>
+  <p>
+    Día más caluroso:
+    <span *ngIf="encontrarDiaConMaximaTemperatura() as diaMax">
+      {{ diaMax.fecha }} con {{ diaMax.temperatura }}°C
+    </span>
+  </p>
+
+  <h2>Resumen</h2>
+  <pre>{{ generarResumen() }}</pre>
+</div>

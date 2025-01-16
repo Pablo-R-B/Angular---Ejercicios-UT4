@@ -1,0 +1,41 @@
+<!-- vehiculo.component.html -->
+<div class="vehiculo">
+  <h1>Sistema de Vehículos</h1>
+
+  <h2>Agregar Coche</h2>
+  <div class="opcion">
+    <label>Marca:</label>
+    <input #marcaCoche type="text" placeholder="Ingrese marca" />
+    <label>Modelo:</label>
+    <input #modeloCoche type="text" placeholder="Ingrese modelo" />
+    <label>Año:</label>
+    <input #anyoCoche type="number" placeholder="Ingrese año" />
+    <label>Número de Puertas:</label>
+    <input #puertasCoche type="number" placeholder="Ingrese puertas" />
+    <button (click)="agregarCoche(marcaCoche.value, modeloCoche.value, +anyoCoche.value, +puertasCoche.value)">
+      Agregar Coche
+    </button>
+  </div>
+
+  <h2>Agregar Motocicleta</h2>
+  <div class="opcion">
+    <label>Marca:</label>
+    <input #marcaMoto type="text" placeholder="Ingrese marca" />
+    <label>Modelo:</label>
+    <input #modeloMoto type="text" placeholder="Ingrese modelo" />
+    <label>Año:</label>
+    <input #anyoMoto type="number" placeholder="Ingrese año" />
+    <label>Tipo de Manillar:</label>
+    <input #manillarMoto type="text" placeholder="Ingrese tipo de manillar" />
+    <button (click)="agregarMotocicleta(marcaMoto.value, modeloMoto.value, +anyoMoto.value, manillarMoto.value)">
+      Agregar Motocicleta
+    </button>
+  </div>
+
+  <h2>Detalles de los Vehículos</h2>
+  <ul>
+    <li *ngFor="let detalle of mostrarDetalles()">{{ detalle }}</li>
+  </ul>
+
+  <p *ngIf="mensaje">{{ mensaje }}</p>
+</div>

@@ -1,0 +1,43 @@
+<!-- empleado.component.html -->
+<div class="empleado">
+  <h1>Sistema de Empleados</h1>
+
+  <h2>Agregar Empleado a Tiempo Completo</h2>
+  <div class="opcion">
+    <label>Nombre:</label>
+    <input #nombreTC type="text" placeholder="Ingrese nombre" />
+    <label>Apellido:</label>
+    <input #apellidoTC type="text" placeholder="Ingrese apellido" />
+    <label>Salario:</label>
+    <input #salarioTC type="number" placeholder="Ingrese salario" />
+    <label>Horas Extras:</label>
+    <input #horasExtras type="number" placeholder="Ingrese horas extras" />
+    <label>Bono por Hora:</label>
+    <input #bonoPorHora type="number" placeholder="Ingrese bono por hora" />
+    <button (click)="agregarEmpleadoTiempoCompleto(nombreTC.value, apellidoTC.value, +salarioTC.value, +horasExtras.value, +bonoPorHora.value)">
+      Agregar Empleado a Tiempo Completo
+    </button>
+  </div>
+
+  <h2>Agregar Empleado por Horas</h2>
+  <div class="opcion">
+    <label>Nombre:</label>
+    <input #nombrePH type="text" placeholder="Ingrese nombre" />
+    <label>Apellido:</label>
+    <input #apellidoPH type="text" placeholder="Ingrese apellido" />
+    <label>Tarifa por Hora:</label>
+    <input #tarifaPorHora type="number" placeholder="Ingrese tarifa por hora" />
+    <label>Horas Trabajadas:</label>
+    <input #horasTrabajadas type="number" placeholder="Ingrese horas trabajadas" />
+    <button (click)="agregarEmpleadoPorHoras(nombrePH.value, apellidoPH.value, +tarifaPorHora.value, +horasTrabajadas.value)">
+      Agregar Empleado por Horas
+    </button>
+  </div>
+
+  <h2>Detalles de Empleados</h2>
+  <ul>
+    <li *ngFor="let detalle of mostrarDetalles()">{{ detalle }}</li>
+  </ul>
+
+  <p *ngIf="mensaje">{{ mensaje }}</p>
+</div>

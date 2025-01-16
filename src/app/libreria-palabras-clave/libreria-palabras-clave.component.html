@@ -1,0 +1,28 @@
+<div class="contenedor">
+  <h1>Biblioteca de Palabras Clave</h1>
+
+  <h2>Palabras Clave</h2>
+  <ul>
+    <li *ngFor="let palabra of keywords">{{ palabra }}</li>
+  </ul>
+
+  <h2>Opciones</h2>
+  <div>
+    <label for="busqueda">Buscar Palabra:</label>
+    <input id="busqueda" #searchInput placeholder="Ingrese palabra" />
+    <button (click)="interactuarConMenu(1, searchInput.value)">Buscar</button>
+  </div>
+
+  <div>
+    <label for="agregar">Añadir Palabra:</label>
+    <input id="agregar" #addInput placeholder="Ingrese palabra" />
+    <button (click)="interactuarConMenu(2, addInput.value)">Añadir</button>
+  </div>
+
+  <div>
+    <button (click)="interactuarConMenu(3)">Ordenar Alfabéticamente</button>
+  </div>
+
+  <h2>Mensaje</h2>
+  <p>{{ message }}</p>
+</div>
